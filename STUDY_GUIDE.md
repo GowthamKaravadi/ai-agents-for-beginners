@@ -2,7 +2,7 @@
 
 This guide serves two purposes:
 1. **Course Summary**: A quick-reference overview of every lesson in the "AI Agents for Beginners" course.
-2. **AI/ML Interview Prep**: A prioritized, tier-based study plan tailored to Senior AI/ML Engineer interview preparation, mapped directly to real-world job requirements.
+2. **AI/ML Interview Prep**: A prioritized, tier-based study plan covering **all 18 public repositories** under `GowthamKaravadi`, tailored to Senior AI/ML Engineer interview preparation and mapped directly to real-world job requirements.
 
 ---
 
@@ -10,11 +10,28 @@ This guide serves two purposes:
 
 ### A.1 Public Repositories Under `GowthamKaravadi`
 
-| # | Repository | Branch | Purpose | Main Technologies | AI/ML Areas | Production Readiness |
-|---|-----------|--------|---------|-------------------|-------------|----------------------|
-| 1 | **ai-agents-for-beginners** | `main` | Structured 16-lesson course teaching how to build production-grade AI agents end-to-end | Python 3.12, Jupyter Notebooks, Azure AI Foundry, Microsoft Agent Framework (MAF), MCP, A2A | GenAI, Agents, RAG, Multi-Agent Systems, MLOps/Observability, Agentic Protocols | CI/CD via GitHub Actions; `.devcontainer` for Codespaces; structured `requirements.txt`; lesson code samples runnable in Azure environments |
+> **Scope**: All 18 confirmed public repositories (including forks) as of April 29, 2026. Private repositories, if any, are not included.
 
-> **Note**: The account may contain additional private or forked repositories. The list above reflects confirmed public repositories accessible via the `main` branch as of the time this guide was generated.
+| # | Repository | Type | Purpose | Main Technologies | AI/ML Areas | Study Priority |
+|---|-----------|------|---------|-------------------|-------------|---------------|
+| 1 | **ai-agents-for-beginners** | Fork | Structured 16-lesson course: production-grade AI agents end-to-end | Python 3.12, Jupyter, Azure AI Foundry, MAF, MCP, A2A | GenAI, Agents, RAG, Multi-Agent, MLOps, Agentic Protocols | 🔴 Tier 1 |
+| 2 | **Made-With-ML** | Fork | Learn to develop, deploy, and iterate on production-grade ML apps | Python, FastAPI, Docker, CI/CD, MLOps tooling | MLOps, Production ML, Model Serving, Data Engineering | 🔴 Tier 1 |
+| 3 | **RAG_Techniques** | Fork | Advanced techniques for Retrieval-Augmented Generation systems | Python, Jupyter, vector DBs, LLMs | Advanced RAG, Hybrid Search, Query Transformation, Re-ranking | 🔴 Tier 1 |
+| 4 | **Hands-On-Large-Language-Models** | Fork | Official code for O'Reilly "Hands-On Large Language Models" | Python, Jupyter, Transformers, OpenAI API | LLMs, Embeddings, Fine-tuning, Text Classification, Semantic Search | 🔴 Tier 1 |
+| 5 | **Prompt-Engineering-Guide** | Fork | Comprehensive guides, papers, and notebooks on prompt engineering, RAG, and AI agents | Markdown, Python, Jupyter | Prompt Engineering, Context Engineering, RAG, AI Agents | 🔴 Tier 1 |
+| 6 | **GenAI_Agents** | Fork | Tutorials and implementations for GenAI agent techniques (basic to advanced) | Python, Jupyter, LangChain, OpenAI | GenAI Agents, Tool Use, Memory, Multi-Agent Systems | 🟡 Tier 2 |
+| 7 | **nn-zero-to-hero** | Fork | Neural Networks: Zero to Hero (Andrej Karpathy course) | Python, Jupyter, PyTorch | Neural Networks, Backprop, Transformers, Tokenization, GPT from scratch | 🟡 Tier 2 |
+| 8 | **annotated_deep_learning_paper_implementations** | Fork | 60+ annotated DL paper implementations with side-by-side notes | Python, PyTorch, Jupyter | Transformers, GANs, RL (PPO, DQN), Optimizers (Adam), Capsule Nets | 🟡 Tier 2 |
+| 9 | **mml-book.github.io** | Fork | Companion webpage and notebooks for "Mathematics for Machine Learning" | Python, Jupyter | Linear Algebra, Probability, Optimization, Regression — ML foundations | 🟡 Tier 2 |
+| 10 | **awesome-nlp** | Fork | Curated NLP resource list (papers, tools, datasets, courses) | Markdown | NLP, Text Classification, NER, Translation, Transformers, LLMs | 🟡 Tier 2 |
+| 11 | **ML-For-Beginners** | Fork | 12-week, 26-lesson classic ML curriculum with quizzes | Python, Jupyter, Scikit-learn | Classic ML, Regression, Classification, Clustering, NLP, Time Series | 🟢 Tier 3 |
+| 12 | **100-Days-Of-ML-Code** | Fork | Structured 100-day ML coding curriculum | Python, Jupyter | ML algorithms, Data Preprocessing, Scikit-learn, Deep Learning intro | 🟢 Tier 3 |
+| 13 | **Python** | Fork | Algorithms implemented in Python (The Algorithms project) | Python | Data Structures, Algorithms, Sorting, Graphs — coding interview prep | 🟢 Tier 3 |
+| 14 | **awesome-datascience** | Fork | Curated Data Science resources (tools, books, papers, tutorials) | Markdown | Data Science, Statistics, EDA, Feature Engineering, Visualization | 🟢 Tier 3 |
+| 15 | **everything-claude-code** | Fork | Agent harness performance optimization: skills, memory, and security for Claude Code and Codex | Markdown, Shell | Agentic tooling, Prompt engineering, Developer productivity with AI | 🟢 Tier 3 |
+| 16 | **awesome-rl** | Fork | Curated Reinforcement Learning resources | Markdown | RL fundamentals, Model-Free RL, Policy Gradients, Deep RL | 🟢 Tier 3 |
+| 17 | **all-rl-algorithms** | Fork | Implementations of all RL algorithms in a simple, readable style | Python | Q-Learning, SARSA, DQN, PPO, DDPG, A3C, SAC | 🟢 Tier 3 |
+| 18 | **Snap-Tap-Input** | Fork | Python GUI software based on Razer's Snap-Tap keyboard feature | Python, Tkinter | _(Not AI/ML — skip for interview prep)_ | ⚪ Skip |
 
 ---
 
@@ -57,13 +74,106 @@ This guide serves two purposes:
 
 ---
 
-## Part B — Prioritized Study Plan (Tier 1 / 2 / 3)
+### A.3 Deep-Dive: Other Repositories
 
-> **Mapping to Job Requirements**: The tiers below are ordered by observed frequency and weight in Senior AI/ML Engineer job postings and interview reports as seen on LinkedIn, Naukri, and equivalent platforms in 2025–2026. This is based on observed trends rather than exhaustive data and may vary by company.
+#### `Made-With-ML`
+**What it covers**: End-to-end production ML — from design, data, modeling, and evaluation through deployment, CI/CD, testing, and monitoring. Structured as a comprehensive MLOps course with a real-world project.
+**Key topics**: Labeling, preprocessing, feature engineering, model training, experiment tracking (MLflow), model packaging (Docker), REST API (FastAPI), CI/CD (GitHub Actions), monitoring and data drift.
+**Interview value**: This is the most directly applicable repo for "how would you put a model in production?" and MLOps system design questions.
+
+#### `RAG_Techniques`
+**What it covers**: 20+ advanced RAG techniques implemented as Jupyter notebooks, each with explanations, diagrams, and code.
+**Key techniques**: Simple RAG, Contextual Compression, Multi-Query Retrieval, RAG Fusion, Self-Querying, Hypothetical Document Embeddings (HyDE), Re-ranking, Adaptive RAG, CRAG (Corrective RAG), Self-RAG.
+**Interview value**: Lets you go beyond "I know RAG" to "I know 10 different RAG variants and when to use each."
+
+#### `Hands-On-Large-Language-Models`
+**What it covers**: O'Reilly book companion code covering LLM fundamentals through applied fine-tuning and deployment.
+**Key chapters**: Text embeddings, semantic search, text classification with LLMs, fine-tuning (LoRA, QLoRA), RAG applications, LLM evaluation, building LLM-powered apps.
+**Interview value**: Provides concrete runnable examples for every major LLM topic; anchors theoretical knowledge to working code.
+
+#### `Prompt-Engineering-Guide`
+**What it covers**: Comprehensive, community-maintained guide covering all prompt engineering techniques, model-specific guides, and AI agent prompting patterns.
+**Key topics**: Zero-shot, few-shot, chain-of-thought (CoT), self-consistency, ReAct, Tree of Thoughts, retrieval-augmented prompting, adversarial prompting, prompt security.
+**Interview value**: Demonstrates you can engineer effective prompts under constraints — directly testable via live coding or take-home exercises.
+
+#### `GenAI_Agents`
+**What it covers**: Progressive tutorials for building GenAI agents — from simple single-function agents to complex multi-agent systems with memory and planning.
+**Key modules**: Basic agent setup, tool integration, retrieval-augmented agents, multi-agent orchestration, memory-enabled agents, self-correcting agents.
+**Interview value**: Bridges theory from `ai-agents-for-beginners` to independent implementation patterns outside Azure.
+
+#### `nn-zero-to-hero`
+**What it covers**: Andrej Karpathy's hands-on course building neural networks from scratch — from basic micrograd autograd engine to a GPT character-level language model.
+**Key notebooks**: `micrograd` (autograd from scratch), `makemore` (bigram → MLP → RNN → Transformer), `nanoGPT` (GPT-2-scale training).
+**Interview value**: Interviewers at top companies frequently ask about backpropagation, gradient flow, and attention mechanism internals — this repo builds that intuition.
+
+#### `annotated_deep_learning_paper_implementations`
+**What it covers**: 60+ deep learning paper re-implementations with line-by-line annotations, covering transformers, GANs, optimizers, and RL.
+**Key implementations**: Original Transformer, ViT, GPT, Switch Transformer, DDPM (diffusion), StyleGAN2, Adam/AdaBelief/Sophia optimizers, PPO, DQN, capsule networks, knowledge distillation.
+**Interview value**: Useful for demonstrating research-level comprehension and for answering questions about specific architectures or "can you explain how Adam works internally?"
+
+#### `mml-book.github.io`
+**What it covers**: Companion material for "Mathematics for Machine Learning" — covering the mathematical prerequisites for understanding modern ML.
+**Key chapters**: Linear algebra (Ch. 2), analytic geometry (Ch. 3), matrix decompositions / SVD / PCA (Ch. 4), probability & distributions (Ch. 6), optimization (Ch. 7), regression (Ch. 9), dimensionality reduction (Ch. 10), density estimation (Ch. 11).
+**Interview value**: Mathematical foundations are tested in senior ML interviews ("derive the closed-form solution for linear regression", "explain PCA geometrically", "what happens to gradient flow in deep networks").
+
+#### `awesome-nlp`
+**What it covers**: Community-curated reading list for NLP — covering research papers, libraries, tools, datasets, and tutorials across all NLP subfields.
+**Key sections**: Language models, question answering, summarization, NER, machine translation, dialogue systems, evaluation, LLMs.
+**Interview value**: Acts as a map for NLP breadth — useful for "what are you aware of in NLP?" questions and for identifying gaps before a focused interview.
+
+#### `ML-For-Beginners`
+**What it covers**: Microsoft's 12-week, 26-lesson classic ML course with Scikit-learn — regression, classification, clustering, NLP, time series, reinforcement learning basics.
+**Interview value**: Good for ensuring fundamentals are solid (bias/variance, confusion matrix, cross-validation, feature scaling) before focusing on deep learning and GenAI.
+
+#### `100-Days-Of-ML-Code`
+**What it covers**: 100-day structured ML curriculum with roadmaps, visual infographics, and code for supervised/unsupervised/deep learning.
+**Interview value**: Quick-reference infographics for algorithms (SVM, random forest, PCA, k-means) — useful for rapid review before coding rounds.
+
+#### `Python` (The Algorithms)
+**What it covers**: Clean Python implementations of standard computer science algorithms — sorting, searching, dynamic programming, graphs, trees, mathematical algorithms, machine learning basics.
+**Interview value**: Direct prep for coding interview rounds (often LeetCode-style in Python) — use to refresh DSA before behavioral/technical screens.
+
+#### `awesome-datascience`
+**What it covers**: Curated resources for the full data science workflow — statistics, EDA, feature engineering, visualization, and ML pipelines.
+**Interview value**: Breadth coverage for "data science" interview rounds common at companies that blend DS and ML engineering roles.
+
+#### `everything-claude-code`
+**What it covers**: Advanced agentic tooling harness covering skills, instincts, memory, security patterns, and research-first development for AI coding agents.
+**Interview value**: Useful for demonstrating awareness of cutting-edge agentic tooling architecture and AI safety/security patterns in autonomous code agents.
+
+#### `awesome-rl` and `all-rl-algorithms`
+**What they cover**: Curated resources (`awesome-rl`) and clean Python implementations (`all-rl-algorithms`) for all major RL algorithms.
+**Interview value**: Study only if RL is expected in the role (robotics, recommendation systems, game AI). For most Senior AI/ML/GenAI roles, RL is a lower priority.
+
+---
+
+> **Scope**: All 18 public repositories under `GowthamKaravadi` have been analyzed. `Snap-Tap-Input` is excluded as it is unrelated to AI/ML.
+> **Mapping to Job Requirements**: Tiers are ordered by observed frequency and weight in Senior AI/ML Engineer job postings and interview reports (LinkedIn, Naukri, 2025–2026). This is based on observed trends rather than exhaustive data and may vary by company.
+
+---
 
 ### 🔴 Tier 1 — Must-Study (Maximum ROI per Hour)
 
-These lessons directly map to the **most common Senior AI/ML interview topics**: GenAI architecture, RAG, production deployment, system design, and agent orchestration.
+These repositories and lessons map directly to the **most common Senior AI/ML interview topics**: GenAI architecture, RAG, production deployment, system design, and agent orchestration.
+
+#### Tier 1A — Repositories
+
+| Priority | Repository | What to Study | Interview Topic Mapped | Est. Time |
+|----------|-----------|---------------|------------------------|-----------|
+| **1** | **ai-agents-for-beginners** | Lessons 01, 04, 05, 08, 10, 11 (see Tier 1B below and Part C for detailed reading plans) | GenAI fundamentals, RAG, tool use, multi-agent design, MLOps, protocols | 10–15 hr |
+| **2** | **Made-With-ML** | `notebooks/` — production ML lifecycle; `README.md` for MLOps architecture | End-to-end ML deployment, CI/CD for ML, model serving, monitoring | 6–8 hr |
+| **3** | **RAG_Techniques** | All notebooks; focus on hybrid search, re-ranking, query transformation, self-querying | Advanced RAG patterns, vector databases, chunking strategies, evaluation | 4–6 hr |
+| **4** | **Hands-On-Large-Language-Models** | Ch. 2–5 (embeddings, text classification, semantic search), Ch. 9 (fine-tuning), Ch. 10–11 (LLM apps) | LLM fundamentals, embeddings, fine-tuning, LLM-powered applications | 6–8 hr |
+| **5** | **Prompt-Engineering-Guide** | `guides/` — zero-shot, few-shot, CoT, ReAct, RAG; `notebooks/` | Prompt engineering techniques, context engineering, RAG design, agent prompting | 4–5 hr |
+
+**Why Tier 1?**
+- RAG is one of the most-asked GenAI topics in 2025–2026 interviews; `RAG_Techniques` gives hands-on depth.
+- `Made-With-ML` is the gold standard for "how do you productionize an ML model?" questions.
+- LLM fundamentals from `Hands-On-Large-Language-Models` underpin every GenAI question.
+- Prompt engineering (`Prompt-Engineering-Guide`) is directly testable in take-home and live coding rounds.
+- `ai-agents-for-beginners` uniquely covers agentic protocols (MCP, A2A) and production observability that are now expected at senior levels.
+
+#### Tier 1B — Key Lessons Within `ai-agents-for-beginners`
 
 | Priority | Lesson | Interview Topic Mapped | Time Estimate |
 |----------|--------|------------------------|---------------|
@@ -74,18 +184,23 @@ These lessons directly map to the **most common Senior AI/ML interview topics**:
 | **5** | **Lesson 04** — Tool Use Design Pattern | Function calling, schema design, LLM↔tool integration | 1–2 hr |
 | **6** | **Lesson 11** — Agentic Protocols (MCP, A2A, NLWeb) | Standardized agent communication, interoperability, enterprise integration | 1–2 hr |
 
-**Why Tier 1?**
-- RAG is one of the most asked-about GenAI topics in 2025-2026 interviews.
-- Production observability and MLOps are baseline expectations for Senior roles.
-- Multi-agent system design mirrors real-world distributed AI systems.
-- Tool use / function calling is tested in nearly every LLM/agent coding interview.
-- MCP and A2A are emerging enterprise standards interviewers probe for awareness of.
-
 ---
 
 ### 🟡 Tier 2 — Important (Depth After Tier 1)
 
-These lessons deepen your understanding of agent design and safety — both common in behavioral and system design rounds.
+These repositories and lessons deepen your understanding of neural network internals, NLP, DL paper implementations, and mathematical foundations — common in behavioral, design, and deep-dive technical rounds.
+
+#### Tier 2A — Repositories
+
+| Priority | Repository | What to Study | Interview Topic Mapped | Est. Time |
+|----------|-----------|---------------|------------------------|-----------|
+| **6** | **GenAI_Agents** | All tutorials in order (basic → advanced); focus on memory and multi-agent notebooks | GenAI agent patterns, tool integration, agent memory, multi-step reasoning | 4–5 hr |
+| **7** | **nn-zero-to-hero** | All 6 Jupyter notebooks (micrograd → GPT); prioritize `makemore` and `nanoGPT` | Neural net internals, backprop, attention, tokenization, GPT architecture | 8–10 hr |
+| **8** | **annotated_deep_learning_paper_implementations** | Transformers (original + ViT), optimizers (Adam), PPO, DQN | Research paper comprehension, transformer architecture deep-dive, RL | 5–8 hr |
+| **9** | **mml-book.github.io** | Ch. 2 (linear algebra), Ch. 5 (optimization), Ch. 9–11 (regression, dimensionality reduction, density estimation) | ML mathematical foundations, PCA, optimization, probability | 5–7 hr |
+| **10** | **awesome-nlp** | Curated reading: Transformers section, LLM section, named entity recognition, summarization | NLP taxonomy, state-of-the-art models, evaluation metrics | 2–3 hr (skim) |
+
+#### Tier 2B — Key Lessons Within `ai-agents-for-beginners`
 
 | Priority | Lesson | Interview Topic Mapped | Time Estimate |
 |----------|--------|------------------------|---------------|
@@ -97,16 +212,31 @@ These lessons deepen your understanding of agent design and safety — both comm
 | **12** | **Lesson 13** — Agent Memory | Memory architectures (short-term, long-term, episodic, semantic) | 1 hr |
 
 **Why Tier 2?**
+- `nn-zero-to-hero` (Karpathy) is widely regarded as the best resource for understanding why LLMs work — a must for senior deep-dive questions.
+- Annotated paper implementations provide evidence of research-level understanding.
+- Math foundations (`mml-book`) underpin questions about optimization, regularization, and loss surface.
 - Framework comparison is a standard "why did you choose X over Y?" question.
-- Planning and metacognition tie to reasoning ability questions ("How would you handle a failing LLM chain?").
 - Trustworthy AI is mandatory at FAANG/enterprise companies (safety reviews, bias audits).
-- Memory architecture connects to database and state management system design.
 
 ---
 
 ### 🟢 Tier 3 — Nice to Have (Skim for Breadth)
 
-These lessons add breadth and handle niche interview questions or specialization areas.
+These resources add breadth, fill in classic ML gaps, and handle niche or specialization questions.
+
+#### Tier 3A — Repositories
+
+| Priority | Repository | What to Study | Interview Topic Mapped | Est. Time |
+|----------|-----------|---------------|------------------------|-----------|
+| **11** | **ML-For-Beginners** | Weeks 4–8 (ML algorithms), Week 11 (NLP), Week 12 (time series) — skip weeks 1–3 if you know the basics | Classic ML: regression, classification, clustering, NLP, time series | 3–4 hr (skim) |
+| **12** | **100-Days-Of-ML-Code** | Day 1–30: supervised learning infographics; Day 60–90: unsupervised and deep learning | ML fundamentals refresher, visual learning aids | 2–3 hr (skim) |
+| **13** | **Python** | Searching, sorting, graph algorithms, dynamic programming sections | Coding interview preparation (data structures & algorithms in Python) | 2–3 hr |
+| **14** | **awesome-datascience** | Curated reading list: statistics, feature engineering, visualization tools | Data science interview breadth, EDA techniques | 1–2 hr (skim) |
+| **15** | **everything-claude-code** | `SKILLS.md`, `MEMORY.md`, `SECURITY.md` — agentic tool patterns and safety | Advanced agentic tooling, agent memory and security architecture | 1 hr |
+| **16** | **awesome-rl** | RL fundamentals section, model-free RL, deep RL references | RL concepts if asked (less common for non-RL senior roles) | 1 hr (skim) |
+| **17** | **all-rl-algorithms** | `dqn.py`, `ppo.py`, `ddpg.py` — read implementations for DQN and PPO | RL algorithm internals, if RL interview expected | 2–3 hr |
+
+#### Tier 3B — Remaining Lessons Within `ai-agents-for-beginners`
 
 | Priority | Lesson | Interview Topic Mapped | Time Estimate |
 |----------|--------|------------------------|---------------|
@@ -114,6 +244,19 @@ These lessons add breadth and handle niche interview questions or specialization
 | **14** | **Lesson 12** — Context Engineering | Prompt engineering at scale, context window management | 1 hr |
 | **15** | **Lesson 15** — Browser Use Agents | Web automation, emerging agent capabilities | 0.5 hr |
 | **16** | **Lesson 00** — Course Setup | Environment setup; only needed for hands-on coding | 0.5 hr |
+
+---
+
+### ⏱ Total Time Estimates by Tier
+
+| Tier | Scope | Estimated Time |
+|------|-------|---------------|
+| 🔴 Tier 1 (5 repos + 6 lessons) | `ai-agents-for-beginners` top lessons, `Made-With-ML`, `RAG_Techniques`, `Hands-On-LLMs`, `Prompt-Engineering-Guide` | **33–43 hr** |
+| 🟡 Tier 2 (5 repos + 6 lessons) | `GenAI_Agents`, `nn-zero-to-hero`, annotated DL, `mml-book`, `awesome-nlp`, remaining top lessons | **26–35 hr** |
+| 🟢 Tier 3 (7 repos + 4 lessons) | Classic ML, algorithms, data science, RL, remaining lessons | **12–18 hr** (skim) |
+| **Total** | All 17 AI/ML repos | **~70–100 hr** |
+
+> **Recommended 2-week sprint**: Do all of Tier 1 in week 1 (daily 4–6 hr), and the highest-priority Tier 2 items (nn-zero-to-hero + GenAI_Agents + key `ai-agents-for-beginners` lessons) in week 2.
 
 ---
 
