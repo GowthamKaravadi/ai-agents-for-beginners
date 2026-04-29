@@ -341,3 +341,185 @@ When designing agents, consider three dimensions:
 - **Space**: Agents should connect people and knowledge, be accessible but unobtrusive.
 - **Time**: Agents should learn from the *Past*, provide relevant nudges in the *Now*, and adapt for the *Future*.
 - **Core**: Embrace uncertainty but establish trust through transparency and user control.
+
+---
+
+## Part G — How to Triage & Prioritize Unknown GitHub Repositories for AI/ML Interview Prep
+
+When you have a list of GitHub repositories (your own or others') and don't yet know their contents, use the following fast-triage methodology — the same approach a senior engineer applies when onboarding to an unfamiliar codebase.
+
+---
+
+### G.1 The Five-Step Triage Process
+
+#### Step 1 — Enumerate Repos and Capture Quick Metadata
+
+Before opening a single file, collect surface-level signals for every repository:
+
+| Signal | What to Note |
+|--------|-------------|
+| **Primary language(s)** | Python-heavy repos signal ML/data work; Go/Rust may indicate infra |
+| **Last commit date** | Actively maintained vs. abandoned project |
+| **Stars / forks** | Popularity proxy; high stars = proven utility |
+| **Topics / tags** | Explicit labels like `machine-learning`, `llm`, `mlops`, `rag` |
+| **Description / title** | One-line self-description is often the fastest signal |
+| **Number of open issues / PRs** | High activity = production-grade or actively developed |
+
+**Goal**: After Step 1 you should be able to mark each repo as "probably ML/AI", "probably infra/DevOps", or "unclear — needs inspection".
+
+---
+
+#### Step 2 — Inspect Key Entry-Point Files (≤ 5 min per repo)
+
+For every repo that passed the Step 1 filter, read these files **in order**:
+
+1. **`README.md`** — Goal, architecture, setup instructions, results/benchmarks. This single file answers ~70 % of classification questions.
+2. **Dependency files** — `requirements.txt`, `pyproject.toml`, `environment.yml`, `Pipfile`, or `package.json`. The library list reveals the ML stack instantly:
+   - `torch`, `tensorflow`, `jax` → deep learning
+   - `transformers`, `langchain`, `openai`, `semantic-kernel`, `autogen` → LLM/agent work
+   - `scikit-learn`, `xgboost`, `lightgbm` → classical ML
+   - `mlflow`, `prefect`, `airflow`, `kubeflow` → MLOps / pipelines
+   - `fastapi`, `flask`, `uvicorn` → model serving / APIs
+3. **Notebooks (`*.ipynb`)** — Scan cell titles. Look for the sequence: EDA → model training → evaluation → deployment.
+4. **Entry-point scripts** — `main.py`, `train.py`, `inference.py`, `app.py`, `api.py`, `serve.py`
+5. **Infrastructure files** — `Dockerfile`, `docker-compose.yml`, `.github/workflows/*.yml`, `Makefile`
+6. **Config files** — `configs/`, `*.yaml`, `hydra` configs (training hyperparameters, pipeline definitions)
+
+**Goal**: After Step 2 you can fill in the table below for each repo.
+
+---
+
+#### Step 3 — Classify Each Repo into ML Interview Buckets
+
+| Bucket | Signals to Look For | Interview Relevance |
+|--------|-------------------|---------------------|
+| **ML Fundamentals** | `scikit-learn`, classical algorithms, cross-validation, feature engineering | Algorithm theory, bias/variance trade-offs |
+| **Deep Learning** | PyTorch/TensorFlow training loops, custom model architectures, backpropagation demos | DL architecture questions, optimization |
+| **NLP / LLMs** | `transformers`, fine-tuning, tokenization, RLHF, prompt engineering, RAG | Most-asked topic in 2025–2026 interviews |
+| **GenAI / Agents** | `langchain`, `autogen`, `semantic-kernel`, `agent-framework`, MCP, A2A, tool use | Rapidly growing interview category |
+| **MLOps / Production** | `mlflow`, `docker`, CI/CD, model monitoring, drift detection, A/B testing | Senior-level baseline requirement |
+| **Data Engineering** | `spark`, `dbt`, `airflow`, `kafka`, feature stores, ETL pipelines | Data infrastructure / pipeline design rounds |
+| **Demos / POCs** | Single notebook, no tests, no CI, README is a README template | Low priority; skim only |
+
+---
+
+#### Step 4 — Prioritize Using Learning-ROI Tiers
+
+Once each repo is classified, assign a tier:
+
+| Tier | Criteria | Action |
+|------|----------|--------|
+| 🔴 **Tier 1** | End-to-end pipeline **+** production signals (API, Docker, tests, CI/CD, observability, evaluation) covering NLP/LLM/GenAI or MLOps | Study in depth — read all code, run notebooks, review PRs and issues |
+| 🟡 **Tier 2** | Strong modeling or agents, but not fully productionized (e.g., good training code but no serving layer) | Study core concepts; skip boilerplate setup |
+| 🟢 **Tier 3** | Demos, tutorials, small POCs, or utility scripts | Skim README and one representative notebook |
+
+**Ordering rule within each tier**: prioritize repos that cover topics you've seen most frequently in recent job postings (RAG, agents, MLOps, system design) before those covering niche or foundational topics you already know well.
+
+---
+
+#### Step 5 — Build a Per-Repo "What to Read First" Plan
+
+For each Tier 1 repo, create a short reading plan:
+
+```
+Repo: <repo-name>
+Tier: 1
+Bucket(s): NLP/LLMs, MLOps
+Time estimate: 2–3 hr
+
+Files to read first:
+  1. README.md               — understand goal and architecture
+  2. requirements.txt        — confirm tech stack
+  3. notebooks/01_eda.ipynb  — understand data and problem framing
+  4. src/train.py            — trace the training loop
+  5. src/serve.py / api.py   — understand how the model is served
+  6. .github/workflows/      — review CI/CD pipeline
+  7. tests/                  — understand quality standards
+
+Interview concepts to extract:
+  - [ ] What ML problem is being solved?
+  - [ ] What model/architecture is used and why?
+  - [ ] How is the model evaluated (metrics, test set, production)?
+  - [ ] How is the model deployed and monitored?
+  - [ ] What were the key engineering trade-offs?
+```
+
+---
+
+### G.2 Fallback: When Full Content Access Is Not Possible
+
+If you cannot read the files inside a repo (private repos, API rate limits, no clone access), use the following metadata-only strategy:
+
+| Metadata Source | What to Extract | How to Use It |
+|----------------|----------------|---------------|
+| **Repo description** | Domain, goal, tech stack keywords | First filter for ML relevance |
+| **Topics / tags** | Explicit labels (`rag`, `llm`, `pytorch`, `mlops`) | Map directly to interview buckets in G.1 |
+| **Primary language stat** | Python ≥ 80 % → strong ML signal | Deprioritize non-Python-primary repos unless infra-focused |
+| **Commit activity graph** | Consistent commits over 6–12 months → production use | High-activity repos more likely to have production patterns |
+| **Open issues / PRs** | Bug reports, feature requests, discussions | Signals real usage; issues about "model accuracy" or "latency" = production concerns |
+| **Releases / tags** | Versioned releases (`v1.0`, `v2.3`) → mature, documented codebase | Prioritize versioned repos over `main`-only |
+| **Fork count** | High forks → reference/template repo used by others | Good sign of educational or reusable value |
+| **README preview** (first 1000 chars) | Even a partial README reveals the repo's purpose | Look for ML framework names, dataset names, task descriptions |
+
+**Metadata-only prioritization checklist:**
+
+```
+For each repo (metadata only):
+  [ ] Language is Python (or Python + infrastructure language)?
+  [ ] Has topics/tags matching: ml, ai, llm, nlp, rag, agents, mlops, deep-learning?
+  [ ] Description or name mentions a recognizable ML task or framework?
+  [ ] Active commits in the last 6 months?
+  [ ] Has open issues or PRs (signals active real-world use)?
+  [ ] Has versioned releases?
+
+Score: count of Yes answers
+  5–6 Yes → Tier 1 candidate (request access or ask owner for key files)
+  3–4 Yes → Tier 2 candidate (skim when accessible)
+  0–2 Yes → Tier 3 or skip
+```
+
+---
+
+### G.3 Fast Triage Cheat Sheet
+
+```
+REPO TRIAGE LOOP (per repo, ~5 min):
+─────────────────────────────────────────────────────────────
+1. METADATA:  language, topics, stars, last commit, description
+              → mark as ML/non-ML/unclear
+
+2. README:    goal? stack? results? architecture diagram?
+              → confirm ML bucket(s)
+
+3. DEPS:      requirements.txt / pyproject.toml
+              → confirm framework (PyTorch, HF, LangChain, MLflow…)
+
+4. NOTEBOOKS: *.ipynb titles → EDA? training? evaluation? demo?
+              → identify depth of ML coverage
+
+5. INFRA:     Dockerfile? CI? tests? monitoring?
+              → assign production-readiness score
+
+ASSIGN TIER:
+  Tier 1 → end-to-end + production signals + LLM/RAG/MLOps
+  Tier 2 → strong modeling, partial production
+  Tier 3 → demo / tutorial / PoC
+
+FALLBACK (no content access):
+  Use metadata checklist from G.2 → score 5-6 = Tier 1 candidate
+─────────────────────────────────────────────────────────────
+```
+
+---
+
+### G.4 Applying This Process to `GowthamKaravadi` Repositories
+
+The same triage loop was applied to the public repositories under `GowthamKaravadi`. Results are captured in **Part A** of this guide. The `ai-agents-for-beginners` repo scored **Tier 1** on all criteria:
+
+- ✅ Python 3.12, Jupyter notebooks, Azure AI Foundry, MAF (ML-relevant stack)
+- ✅ Topics: `ai-agents`, `llm`, `rag`, `multi-agent`, `mlops` (explicit ML tags)
+- ✅ Active commits, open issues, versioned course structure (production signals)
+- ✅ CI/CD via GitHub Actions, `.devcontainer`, structured `requirements.txt`
+- ✅ End-to-end coverage: from fundamentals (Lesson 01) through production deployment (Lesson 10)
+
+To apply the triage process to additional repositories as they become accessible, use the checklist in **G.2** and the reading plan template in **G.1 Step 5**.
