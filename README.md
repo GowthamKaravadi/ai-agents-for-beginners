@@ -77,6 +77,15 @@ This course uses the following AI Agent frameworks and services from Microsoft:
 
 For more information on running the code for this course, go to the [Course Setup](./00-course-setup/README.md).
 
+## 🗺️ 6-Month Learning Journey (Job-Aligned)
+
+Looking to use this course to prepare for a **Senior AI Engineer** role? Check out the [**6-Month Learning Journey Plan**](./LEARNING_JOURNEY_6_MONTHS.md) — a week-by-week, 24-week plan tailored to a real-world Senior AI Engineer job description (Wells Fargo, Bengaluru) covering:
+
+- ✅ RAG pipelines · Neo4j · Vector DBs · FastAPI · MCP · Agent evaluation · Observability
+- ✅ Week-by-week plan with measurable deliverables
+- ✅ 2 portfolio projects with milestones and acceptance criteria
+- ✅ Full interview preparation checklist
+
 ## 🙏 Want to help?
 
 Do you have suggestions or found spelling or code errors? [Raise an issue](https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/ai-agents-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
