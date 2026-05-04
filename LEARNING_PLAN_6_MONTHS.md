@@ -1,10 +1,10 @@
 # 6-Month AI Agents Learning Journey (Python-First)
 
-> **Job Posting Reference**: This plan was requested in the context of LinkedIn job posting  
-> `https://www.linkedin.com/jobs/view/4409175383/`.  
+> **Job Posting Reference**: This plan was created in the context of an AI Agents engineering role  
+> (LinkedIn job posting `4409175383`).  
 > LinkedIn pages are often gated and inaccessible in automation environments.  
 > **See [Appendix A](#appendix-a--job-description-paste-template) to paste the full JD text and generate a  
-> personalised skills → modules → projects mapping.**
+> personalized skills → modules → projects mapping.**
 
 ---
 
@@ -599,7 +599,7 @@ Use this checklist before applying for roles. Each item should be true for every
 ## Appendix A — Job Description Paste Template
 
 > **Instructions**: LinkedIn job pages are often gated and inaccessible in automation environments.  
-> To get a personalised plan tailored to your specific JD, paste the job description text below  
+> To get a personalized plan tailored to your specific JD, paste the job description text below  
 > and use the mapping table in [Appendix B](#appendix-b--skills--modules--projects-mapping-table-generic) to map each required skill to the relevant  
 > lesson(s) and project(s) in this plan.
 
@@ -700,4 +700,4 @@ This table maps the most common AI agent job requirements to the lessons in this
 
 ---
 
-*Last updated: 2026-05 | Repository: [GowthamKaravadi/ai-agents-for-beginners](https://github.com/GowthamKaravadi/ai-agents-for-beginners)*
+*Last updated: 2026-05 | Repository: [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners)*
